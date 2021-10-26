@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "source": "/html/index.html",
+  "scripts": {
+    "run": "parcel",
+    "build": "parcel build",
+    "serve": "parcel watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/k2d222/portfolio.git"
+  },
+  "author": "Mathis Brossier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2d222/portfolio/issues"
+  },
+  "homepage": "https://github.com/k2d222/portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.0",
+    "@parcel/transformer-sass": "^2.0.0",
+    "@parcel/transformer-vue": "^2.0.0",
+    "@parcel/transformer-yaml": "^2.0.0",
+    "parcel": "^2.0.0",
+    "sass": "^1.43.3",
+    "typescript": "^4.4.4",
+    "vue": "^3.2.20"
+  }
+}

@@ -1,0 +1,8 @@
+subtitle: Étudiant ingénieur en informatique à Polytech Paris-Saclay.
+internship: Recherche un stage de mai à août 2021 – contactez-moi !
+
+projects:
+  - moncraft:
+      name: MonCraft
+      brief: Un jeu vidéo inspiré de Minecraft
+      desc: Jeu vidéo Réalisé "from sratch" en C++ et OpenGL. Jouable en multijoueur, sur PC ou navigateur.
