@@ -1,8 +1,32 @@
 subtitle: Étudiant ingénieur en informatique à Polytech Paris-Saclay.
-internship: Recherche un stage de mai à août 2021 – contactez-moi !
+internship: Recherche un stage de mai à août 2022.
+contactme: Contactez-moi par mail ou bien directement par téléphone.
+curriculum: Retrouvez mon C.V. en version pdf.
+
+titleprojects: Derniers Projets
+titlecontact: Contact
+titlecv: Curriculum Vitae
 
 projects:
-  - moncraft:
-      name: MonCraft
-      brief: Un jeu vidéo inspiré de Minecraft
-      desc: Jeu vidéo Réalisé "from sratch" en C++ et OpenGL. Jouable en multijoueur, sur PC ou navigateur.
+  moncraft:
+    name: MonCraft
+    brief: Jeu vidéo inspiré de Minecraft
+    desc: Jeu vidéo Réalisé "from sratch" en C++ et OpenGL. Jouable en multijoueur, sur PC ou navigateur.
+    collab: Pierre Surer, Houssem Mahmoud
+    link: https://moncraft.thissma.fr/
+  ur:
+    name: Jeu de Ur
+    brief: Jeu de plateau dans le navigateur
+    desc: Animations, Implémentation d'un bot et d'un mode multijoueur avec un serveur.
+  pixels:
+    name: Pixels
+    brief: Dessin à plusieurs dans le navigateur
+    desc: Inspiré par l'expérience "r/place" de Reddit.
+  podelium:
+    name: Podelium [En cours]
+    brief: Jeu vidéo – Tower Defense
+    desc: Animations, Implémentation d'un bot et d'un mode multijoueur avec un serveur.
+  goteka:
+    name: Goteka [Expérimental, En cours]
+    brief: Transpilation du toolkit GTK dans le navigateur
+    desc: Ambitieux projet de portage de GTK avec WebAssembly et un transpilateur écrit en Rust.
