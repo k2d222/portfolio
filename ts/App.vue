@@ -11,16 +11,14 @@
 
     > nav
       display: flex
-      column-gap: 1rem
+      gap: 2rem
 
-  #presentation
+  section#presentation
+    margin: 10rem 0
     text-align: center
 
     #about
       margin: 5rem 0
-
-    h1
-      font-size: 4rem
 
     p
       font-size: 1.5rem
@@ -33,7 +31,7 @@
       grid-template-columns: repeat(4, 1fr)
 
   section
-    margin: 10rem 0
+    margin: 5rem 0
 
   .flag
     height: 1em
@@ -45,15 +43,15 @@
   <header>
     <img src="../assets/logo-light.svg" alt="Mathis Brossier">
     <nav>
-      <a href="/fr/"><img class="flag" src="../assets/flag_fr.svg" alt="français"></a>
-      <a href="/en/"><img class="flag" src="../assets/flag_en.svg" alt="english"></a>
+      <img @click="_ = fr" class="flag" src="../assets/flag_fr.svg" alt="français">
+      <img  @click="_ = en" class="flag" src="../assets/flag_en.svg" alt="english">
       <a href="#contact">{{ _.titlecontact }}</a>
       <a href="#cv">{{ _.titlecv }}</a>
     </nav>
   </header>
 
   <section id="presentation">
-    <h1>Mathis Brossier</h1>
+    <anim-title text="Mathis Brossier"></anim-title>
     <div id="about">
       <p>{{ _.subtitle }}</p>
       <p>{{ _.internship }}</p>
@@ -64,7 +62,7 @@
     <h2>{{ _.titleprojects }}</h2>
     <div id="cards">
       <card
-        v-for="card in cards"
+        v-for="card in _.projects"
         v-bind:card="card">
       </card>
     </div>
@@ -88,16 +86,17 @@
 </template>
 
 <script>
-  import lang from "../i18n/en.yaml"
+  import fr from "../i18n/fr.yaml"
+  import en from "../i18n/en.yaml"
 
-  const cards = lang.projects
+  const lang = fr
 
   export default {
     data() {
       return {
-        _: lang,
-        cards,
+        fr, en,
+        _: lang
       }
-    },
+    }
   }
 </script>
