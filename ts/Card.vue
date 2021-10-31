@@ -8,11 +8,13 @@
 </style>
 
 <template>
-  <div class="card">
-    <h3>{{ proj('name') }}</h3>
-    <span class="brief">{{ proj('brief') }}</span>
-    <p>{{ proj('desc') }}</p>
-  </div>
+  <router-link :to="{ name: 'project', params: { projectid } }">
+    <div class="card">
+      <h3>{{ proj('name') }}</h3>
+      <span class="brief">{{ proj('brief') }}</span>
+      <p>{{ proj('desc') }}</p>
+    </div>
+  </router-link>
 </template>
 
 <script>

@@ -2,10 +2,14 @@ import { createApp } from "vue"
 import { createI18n } from "vue-i18n"
 import { createRouter, createWebHistory } from "vue-router"
 
+import Root from './Root.vue'
 import App from './App.vue'
 import Home from './Home.vue'
 import Card from './Card.vue'
-import AnimTitle from './AnimTitle.vue'
+import MyTitle from './Title.vue'
+import Projects from './Projects.vue'
+import Project from './Project.vue'
+import MyHeader from './Header.vue'
 
 import fr from "../i18n/fr.yaml"
 import en from "../i18n/en.yaml"
@@ -31,15 +35,23 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      name: 'lang',
       path: '/:locale',
-      component: Home,
+      component: App,
       children: [
+        {
+          name: 'home',
+          path: '',
+          component: Home
+        },
+        {
+          name: 'project',
+          path: 'projects/:projectid',
+          component: Project
+        }
       ]
     },
     {
       path: '/',
-      component: Home,
       redirect: { name: 'lang', params: { locale: 'fr' } }
     },
   ],
@@ -47,10 +59,13 @@ const router = createRouter({
 
 router.beforeEach(localeGuard)
 
-const app = createApp(App)
+const app = createApp(Root)
 app.use(i18n)
 app.use(router)
 app.component('home', Home)
 app.component('card', Card)
-app.component('anim-title', AnimTitle)
+app.component('my-header', MyHeader)
+app.component('my-title', MyTitle)
+app.component('projects', Projects)
+app.component('project', Project)
 app.mount('#app')

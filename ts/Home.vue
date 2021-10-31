@@ -1,18 +1,4 @@
 <style lang="sass">
-  header
-    display: flex
-    flex-direction: row
-    gap: 1rem
-    align-items: center
-    justify-content: space-between
-
-    > img
-      height: 3rem
-
-    > nav
-      display: flex
-      gap: 2rem
-
   section#presentation
     margin: 10rem 0
     text-align: center
@@ -40,18 +26,8 @@
 
 <template>
 
-  <header>
-    <img src="../assets/logo-light.svg" alt="Mathis Brossier">
-    <nav>
-      <router-link :to="{ name: 'lang', params: { locale: 'fr' }}"><img class="flag" src="../assets/flag_fr.svg" alt="français"></router-link>
-      <router-link :to="{ name: 'lang', params: { locale: 'en' }}"><img class="flag" src="../assets/flag_en.svg" alt="english"></router-link>
-      <a href="#contact">{{ $t("titlecontact") }}</a>
-      <a href="#cv">{{ $t("titlecv") }}</a>
-    </nav>
-  </header>
-
   <section id="presentation">
-    <anim-title text="Mathis Brossier"></anim-title>
+    <my-title text="Mathis Brossier"></my-title>
     <div id="about">
       <p>(site en travaux)</p>
       <p>{{ $t("subtitle") }}</p>
@@ -59,15 +35,7 @@
     </div>
   </section>
 
-  <section id="projets">
-    <h2>{{ $t("titleprojects") }}</h2>
-    <div id="cards">
-      <card
-        v-for="proj in projects"
-        :projectid=proj>
-      </card>
-    </div>
-  </section>
+  <projects></projects>
 
   <section id="contact">
     <h2>{{ $t("titlecontact") }}</h2>
@@ -87,11 +55,5 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        projects: [ 'moncraft', 'ur', 'pixels', 'podelium', 'goteka' ]
-      }
-    },
-  }
+  export default {}
 </script>
