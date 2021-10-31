@@ -29,11 +29,6 @@
 </template>
 
 <script>
-  import fr from "../i18n/fr.yaml"
-  import en from "../i18n/en.yaml"
-
-  const lang = fr
-
   export default {
     data() {
       return {

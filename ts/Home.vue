@@ -53,6 +53,7 @@
   <section id="presentation">
     <anim-title text="Mathis Brossier"></anim-title>
     <div id="about">
+      <p>(site en travaux)</p>
       <p>{{ $t("subtitle") }}</p>
       <p>{{ $t("internship") }}</p>
     </div>
@@ -86,23 +87,11 @@
 </template>
 
 <script>
-  const locales = [ 'en', 'fr' ]
-
-  function updateLang(to, from) {
-    const locale = to.params.locale
-    const locales = this.$i18n.availableLocales
-    if (typeof locale === 'string' && locales.includes(locale)) {
-      this.$i18n.locale = locale
-    }
-  }
-
   export default {
     data() {
       return {
         projects: [ 'moncraft', 'ur', 'pixels', 'podelium', 'goteka' ]
       }
     },
-    beforeRouteUpdate: updateLang,
-    beforeRouteEnter: (to, from, next) => next(vm => updateLang.bind(vm)(to, from)),
   }
 </script>
