@@ -9,14 +9,20 @@
 
 <template>
   <div class="card">
-    <h3>{{ card.name }}</h3>
-    <span class="brief">{{ card.brief }}</span>
-    <p>{{ card.desc }}</p>
+    <h3>{{ proj('name') }}</h3>
+    <span class="brief">{{ proj('brief') }}</span>
+    <p>{{ proj('desc') }}</p>
   </div>
 </template>
 
 <script>
   export default {
-    props: [ 'card' ]
+    props: [ 'projectid' ],
+
+    methods: {
+      proj(attr) {
+        return this.$t('projects.' + this.projectid + '.' + attr)
+      }
+    }
   };
 </script>
