@@ -3,12 +3,14 @@
     display: grid
     gap: 2rem
     grid-template-columns: 1fr
-    @media (min-width: 1023px)
-      grid-template-columns: repeat(4, 1fr)
+    grid-auto-rows: 60vw
+    @media (min-width: 1500px)
+      grid-template-columns: repeat(2, 1fr)
+      grid-auto-rows: 30vw
 </style>
 
 <template>
-  <section id="projets">
+  <section id="projects">
     <h2>{{ $t("titleprojects") }}</h2>
     <div id="cards">
       <card v-for="proj in projects" :projectid=proj></card>

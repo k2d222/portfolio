@@ -15,7 +15,7 @@ import fr from "../i18n/fr.yaml"
 import en from "../i18n/en.yaml"
 
 const i18n = createI18n({
-  locale: 'en',
+  locale: navigator.language.substr(0, 2),
   fallbackLocale: 'en',
   messages: { fr, en },
 })
@@ -33,6 +33,14 @@ const localeGuard = (to, from) => {
 
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior (to, from, savedPosition) {
+    if(to.hash) {
+       return { el: to.hash, behavior: 'smooth' }
+    }
+    else {
+      return { to: 0 }
+    }
+  },
   routes: [
     {
       path: '/:locale',
@@ -52,7 +60,7 @@ const router = createRouter({
     },
     {
       path: '/',
-      redirect: { name: 'lang', params: { locale: 'fr' } }
+      redirect: { name: 'home', params: { locale: 'fr' } }
     },
   ],
 })

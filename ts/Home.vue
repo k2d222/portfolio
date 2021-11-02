@@ -19,6 +19,12 @@
   section
     margin: 5rem 0
 
+    > h2
+      font-size: 2rem
+
+      &::before
+        content: "// "
+
   .flag
     height: 1em
 

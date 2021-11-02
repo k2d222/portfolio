@@ -3,8 +3,11 @@ internship: Recherche un stage de mai à août 2022.
 contactme: Contactez-moi par mail ou bien directement par téléphone.
 curriculum: Retrouvez mon C.V. en version pdf.
 
+navprojects: Projets
+navcontact: Contact
+navcv: C.V.
 titleprojects: Mes Derniers Projets
-titlecontact: Contact
+titlecontact: Contactez-moi
 titlecv: Curriculum Vitae
 
 projects:
@@ -25,8 +28,8 @@ projects:
   podelium:
     name: Podelium [En cours]
     brief: Jeu vidéo – Tower Defense
-    desc: Animations, Implémentation d'un bot et d'un mode multijoueur avec un serveur.
+    desc: Jeu vidéo mêlant stratégie, coopération et compétition
   goteka:
     name: Goteka [Expérimental, En cours]
-    brief: Transpilation du toolkit GTK dans le navigateur
+    brief: Transpilation de GTK dans le navigateur
     desc: Ambitieux projet de portage de GTK avec WebAssembly et un transpilateur écrit en Rust.

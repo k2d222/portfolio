@@ -26,8 +26,15 @@
       <router-link :to="{ params: { locale: 'en' }}">
         <img class="flag" src="../assets/flag_en.svg" alt="english">
       </router-link>
-      <a href="#contact">{{ $t("titlecontact") }}</a>
-      <a href="#cv">{{ $t("titlecv") }}</a>
+      <router-link :to="{ name: 'home', hash: '#projects'}">
+        {{ $t("navprojects") }}
+      </router-link>
+      <router-link :to="{ name: 'home', hash: '#contact'}">
+        {{ $t("navcontact") }}
+      </router-link>
+      <router-link :to="{ name: 'home', hash: '#cv'}">
+        {{ $t("navcv") }}
+      </router-link>
     </nav>
   </header>
 </template>

@@ -3,8 +3,11 @@ internship: Looking for an internship from May to August, 2022.
 contactme: Don't hesitate to send me an email or simply call (France).
 curriculum: Download my resume in pdf.
 
+navprojects: Projects
+navcontact: Contact
+navcv: Resume
 titleprojects: My Latest Projects
-titlecontact: Contact
+titlecontact: Get in touch
 titlecv: Resume
 
 projects:
@@ -18,7 +21,7 @@ projects:
     desc: Features include animations, a bot adversary as well as a web server to play with friends.
   pixels:
     name: Pixels
-    brief: Draw together on a pixelated canvas on the web
+    brief: Draw together on a pixelated canvas
     desc: Inspired by the viral "r/place" experiment hosted on Reddit.
   podelium:
     name: Podelium [Ongoing]
