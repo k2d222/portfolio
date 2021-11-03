@@ -63,7 +63,7 @@
 <template>
   <router-link :to="{ name: 'project', params: { projectid } }">
     <div class="card">
-      <img :src="images[projectid] || images['moncraft']" alt="">
+      <img :src="getImg()" alt="" />
       <h2><span>{{ proj('name') }}</span></h2>
       <span class="brief">{{ proj('brief') }}</span>
       <p>{{ proj('desc') }}</p>
@@ -72,21 +72,13 @@
 </template>
 
 <script>
-  const images = {
-    moncraft: new URL('../projects/moncraft/moncraft.png?as=webp&width=800', import.meta.url),
-    ur: new URL('../projects/ur/gameofur.png?as=webp&width=800', import.meta.url),
-    pixels: new URL('../projects/pixels/pixels.png?as=webp&width=800', import.meta.url),
-    podelium: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
-    goteka: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),
-  }
-
   export default {
-    data() {
-      return { images }
-    },
     props: [ 'projectid' ],
 
     methods: {
+      getImg() {
+        return this.projects[this.projectid].img
+      },
       proj(attr) {
         return this.$t('projects.' + this.projectid + '.' + attr)
       }

@@ -13,17 +13,11 @@
   <section id="projects">
     <h2>{{ $t("titleprojects") }}</h2>
     <div id="cards">
-      <card v-for="proj in projects" :projectid=proj></card>
+      <card v-for="proj in Object.keys(projects)" :projectid=proj></card>
     </div>
   </section>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        projects: [ 'moncraft', 'ur', 'pixels', 'podelium', 'goteka' ]
-      }
-    },
-  }
+  export default {}
 </script>

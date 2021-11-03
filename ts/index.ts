@@ -67,7 +67,32 @@ const router = createRouter({
 
 router.beforeEach(localeGuard)
 
+import moncraft_fr from "bundle-text:../projects/moncraft/fr.pug"
+
+const projects = {
+    moncraft: {
+        img: new URL('../projects/moncraft/moncraft.png?as=webp&width=800', import.meta.url),
+        content: {
+          fr: moncraft_fr,
+        },
+    },
+    ur: {
+        img: new URL('../projects/ur/gameofur.png?as=webp&width=800', import.meta.url),
+    },
+    pixels: {
+        img: new URL('../projects/pixels/pixels.png?as=webp&width=800', import.meta.url),
+    },
+    podelium: {
+        img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
+    },
+    goteka: {
+        img: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),
+    },
+}
+
+
 const app = createApp(Root)
+app.config.globalProperties.projects = projects
 app.use(i18n)
 app.use(router)
 app.component('home', Home)
