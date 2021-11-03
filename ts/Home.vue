@@ -35,7 +35,7 @@
   <section id="presentation">
     <my-title text="Mathis Brossier"></my-title>
     <div id="about">
-      <p>(site en travaux)</p>
+      <!-- <p>(site en travaux)</p> -->
       <p>{{ $t("subtitle") }}</p>
       <p>{{ $t("internship") }}</p>
     </div>

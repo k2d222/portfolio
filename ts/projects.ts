@@ -1,4 +1,8 @@
 import moncraft_fr from "bundle-text:../projects/moncraft/fr.pug"
+import moncraft_en from "bundle-text:../projects/moncraft/en.pug"
+
+import ur_fr from "bundle-text:../projects/ur/fr.pug"
+import ur_en from "bundle-text:../projects/ur/en.pug"
 
 interface Project {
     img: URL,
@@ -18,11 +22,16 @@ const MyProjects: Projects = {
         git: 'https://github.com/k2d222/MonCraft',
         content: {
           fr: moncraft_fr,
+          en: moncraft_en,
         },
     },
     ur: {
         img: new URL('../projects/ur/gameofur.png?as=webp&width=800', import.meta.url),
         link: 'https://ur.thissma.fr/',
+        content: {
+          fr: ur_fr,
+          en: ur_en
+        },
     },
     pixels: {
         img: new URL('../projects/pixels/pixels.png?as=webp&width=800', import.meta.url),
@@ -31,7 +40,7 @@ const MyProjects: Projects = {
     },
     podelium: {
         img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
-        collab: 'Emma nourry, Nathanaël Almeida, Koko Bill, Maxime Boissonat',
+        collab: 'Emma Nourry, Nathanaël Almeida, Koko Bill Zadi Kenfack, Maxime Boissonat, Gaël Erluche',
     },
     goteka: {
         img: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),

@@ -10,6 +10,10 @@ titleprojects: My Latest Projects
 titlecontact: Get in touch
 titlecv: Resume
 
+projectlink: "Link: "
+projectgit: "Git: "
+projectcollab: "Collaboration: "
+
 projects:
   moncraft:
     name: MonCraft
