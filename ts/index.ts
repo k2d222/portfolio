@@ -2,14 +2,16 @@ import { createApp } from "vue"
 import { createI18n } from "vue-i18n"
 import { createRouter, createWebHistory } from "vue-router"
 
-import Root from './Root.vue'
-import App from './App.vue'
-import Home from './Home.vue'
-import Card from './Card.vue'
-import MyTitle from './Title.vue'
-import Projects from './Projects.vue'
-import Project from './Project.vue'
-import MyHeader from './Header.vue'
+import VueRoot from './Root.vue'
+import VueApp from './App.vue'
+import VueHome from './Home.vue'
+import VueCard from './Card.vue'
+import VueTitle from './Title.vue'
+import VueProjects from './Projects.vue'
+import VueProject from './Project.vue'
+import VueHeader from './Header.vue'
+
+import Projects from './projects'
 
 import fr from "../i18n/fr.yaml"
 import en from "../i18n/en.yaml"
@@ -44,17 +46,17 @@ const router = createRouter({
   routes: [
     {
       path: '/:locale',
-      component: App,
+      component: VueApp,
       children: [
         {
           name: 'home',
           path: '',
-          component: Home
+          component: VueHome
         },
         {
           name: 'project',
           path: 'projects/:projectid',
-          component: Project
+          component: VueProject
         }
       ]
     },
@@ -67,38 +69,14 @@ const router = createRouter({
 
 router.beforeEach(localeGuard)
 
-import moncraft_fr from "bundle-text:../projects/moncraft/fr.pug"
-
-const projects = {
-    moncraft: {
-        img: new URL('../projects/moncraft/moncraft.png?as=webp&width=800', import.meta.url),
-        content: {
-          fr: moncraft_fr,
-        },
-    },
-    ur: {
-        img: new URL('../projects/ur/gameofur.png?as=webp&width=800', import.meta.url),
-    },
-    pixels: {
-        img: new URL('../projects/pixels/pixels.png?as=webp&width=800', import.meta.url),
-    },
-    podelium: {
-        img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
-    },
-    goteka: {
-        img: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),
-    },
-}
-
-
-const app = createApp(Root)
-app.config.globalProperties.projects = projects
+const app = createApp(VueRoot)
+app.config.globalProperties.projects = Projects
 app.use(i18n)
 app.use(router)
-app.component('home', Home)
-app.component('card', Card)
-app.component('my-header', MyHeader)
-app.component('my-title', MyTitle)
-app.component('projects', Projects)
-app.component('project', Project)
+app.component('home', VueHome)
+app.component('card', VueCard)
+app.component('my-header', VueHeader)
+app.component('my-title', VueTitle)
+app.component('projects', VueProjects)
+app.component('project', VueProject)
 app.mount('#app')

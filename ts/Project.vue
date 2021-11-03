@@ -73,17 +73,17 @@
         <h2 class="brief"><span>{{ proj("brief") }}</span></h2>
       </div>
       <div class="right">
-        <div v-if="proj_e('collab')">
+        <div v-if="projmeta_e('collab')">
           <h3>{{ $t('projectcollab') }}</h3>
-          <span>{{ proj('collab') }}</span>
+          <span>{{ projmeta('collab') }}</span>
         </div>
-        <div v-if="proj_e('link')">
+        <div v-if="projmeta_e('link')">
           <h3>{{ $t('projectlink') }}</h3>
-          <a :href="proj('link')">{{ proj('link') }}</a>
+          <a :href="projmeta('link')">{{ fmturl(projmeta('link')) }}</a>
         </div>
-        <div v-if="proj_e('git')">
+        <div v-if="projmeta_e('git')">
           <h3>{{ $t('projectgit') }}</h3>
-          <a :href="proj('git')">{{ proj('git') }}</a>
+          <a :href="projmeta('git')">{{ projmeta('git') }}</a>
         </div>
       </div>
     </section>
@@ -97,6 +97,20 @@
       getImg() {
         const projectid = this.$route.params.projectid
         return this.projects[projectid].img
+      },
+      fmturl(url) {
+        const re = /(?:https?:\/\/)?(.+?)\/?$/
+        const match = re.exec(url)
+        if(match) return match[1]
+        else return url
+      },
+      projmeta(attr) {
+        const projectid = this.$route.params.projectid
+        return this.projects[projectid][attr]
+      },
+      projmeta_e(attr) {
+        const projectid = this.$route.params.projectid
+        return attr in this.projects[projectid]
       },
       proj(attr) {
         return this.$t('projects.' + this.$route.params.projectid + '.' + attr)

@@ -19,9 +19,6 @@ projects:
     name: MonCraft
     brief: Jeu vidéo inspiré de Minecraft
     desc: Jeu vidéo Réalisé "from sratch" en C++ et OpenGL. Jouable en multijoueur, sur PC ou navigateur.
-    collab: Pierre Surer, Houssem Mahmoud
-    link: https://moncraft.thissma.fr/
-    git: https://github.com/k2d222/MonCraft
   ur:
     name: Jeu de Ur
     brief: Jeu de plateau dans le navigateur
