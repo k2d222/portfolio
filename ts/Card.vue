@@ -14,8 +14,13 @@
     $bg: rgba(0, 0, 0, 0.9)
 
     h2 > span, .brief
-        padding: .5rem 1rem
-        background: $bg
+      padding: .5rem 1rem
+      background: $bg
+      box-decoration-break: clone
+      line-height: 1.8em
+
+    .brief
+      line-height: 2em
 
     p
       margin: 0

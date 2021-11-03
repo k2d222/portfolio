@@ -38,6 +38,11 @@
         & > span
           background: rgba(0, 0, 0, .9)
           padding: .5rem 1rem
+          box-decoration-break: clone
+          line-height: 1.5em
+
+      h2 > span
+        line-height: 2em
 
   .project
     font-size: 1.5rem
