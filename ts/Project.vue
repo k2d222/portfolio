@@ -9,6 +9,11 @@
     flex-wrap: wrap
     position: relative
 
+    @media (max-width: 800px)
+      margin: 1rem
+      margin-top: 3rem
+      margin-bottom: 0
+
     img
       position: absolute
       top: 0
@@ -52,6 +57,10 @@
     background: #dedede
     color: #171617
     padding: 2rem
+
+    @media (max-width: 800px)
+      margin: 1rem
+      margin-top: 0
 
     > p:first-child
       margin-top: 0

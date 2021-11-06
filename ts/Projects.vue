@@ -4,7 +4,7 @@
     gap: 2rem
     grid-template-columns: 1fr
     grid-auto-rows: 60vw
-    @media (min-width: 1500px)
+    @media (min-width: 1023px)
       grid-template-columns: repeat(2, 1fr)
       grid-auto-rows: 30vw
 </style>
