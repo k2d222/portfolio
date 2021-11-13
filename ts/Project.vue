@@ -9,6 +9,8 @@
     flex-wrap: wrap
     position: relative
 
+    $bg: rgba(14, 14, 19, 0.89)
+
     @media (max-width: 800px)
       margin: 1rem
       margin-top: 3rem
@@ -31,7 +33,7 @@
 
     .right
       padding: 1rem
-      background: rgba(0, 0, 0, .9)
+      background: $bg
       &:empty
         display: none
 
@@ -41,7 +43,7 @@
     .left
       h1, h2
         & > span
-          background: rgba(0, 0, 0, .9)
+          background: $bg
           padding: .5rem 1rem
           box-decoration-break: clone
           line-height: 1.5em
@@ -54,7 +56,7 @@
     font-family: sans-serif
     margin: 3rem
     margin-top: 0
-    background: #dedede
+    background: #d4e0e1
     color: #171617
     padding: 2rem
 

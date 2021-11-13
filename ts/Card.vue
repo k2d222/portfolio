@@ -11,7 +11,7 @@
     font-size: 1.5rem
     line-height: 2rem
 
-    $bg: rgba(0, 0, 0, 0.9)
+    $bg: rgba(14, 14, 19, 0.89)
 
     h2 > span, .brief
       padding: .5rem 1rem
@@ -29,8 +29,8 @@
       left: 0
       right: 0
       padding: 1.5rem 2rem
-      background: white
-      color: black
+      background: #d4e0e1
+      color: #171617
       border-top: 2px solid black
 
 

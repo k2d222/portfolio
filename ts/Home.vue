@@ -46,16 +46,16 @@
   <section id="contact">
     <h2>{{ $t("titlecontact") }}</h2>
     <p>{{ $t("contactme") }}</p>
-    <p><a href="mailto:mathis.brossier@universite-paris-saclay.fr">mathis.brossier@universite-paris-saclay.fr</a> — (+33)7.81.40.33.66</p>
+    <p><a class="text" href="mailto:mathis.brossier@universite-paris-saclay.fr">mathis.brossier@universite-paris-saclay.fr</a> — (+33)7.81.40.33.66</p>
   </section>
 
   <section id="cv">
     <h2>{{ $t("titlecv") }}</h2>
     <p>{{ $t("curriculum") }}</p>
     <p>
-      <a href="CV_Mathis_Brossier_fr.pdf"><img class="flag" src="../assets/flag_fr.svg" alt="français"> français</a>
+      <a class="text" href="CV_Mathis_Brossier_fr.pdf"><img class="flag" src="../assets/flag_fr.svg" alt="français"> français</a>
        —
-      <a href="CV_Mathis_Brossier_en.pdf"><img class="flag" src="../assets/flag_en.svg" alt="english"> english</a></p>
+      <a class="text" href="CV_Mathis_Brossier_en.pdf"><img class="flag" src="../assets/flag_en.svg" alt="english"> english</a></p>
   </section>
 
 </template>

@@ -12,6 +12,13 @@
     nav
       display: flex
       gap: 2rem
+
+      a
+        text-decoration: none
+        border-bottom: 2px solid transparent
+        &:hover
+          border-bottom-color: inherit
+          transition: border .2s
 </style>
 
 <template>
