@@ -32,6 +32,6 @@ projects:
     brief: Jeu vidéo – Tower Defense
     desc: Jeu vidéo mêlant stratégie, coopération et compétition
   goteka:
-    name: Goteka [Expérimental, En cours]
+    name: Goteka [Expérimental]
     brief: Transpilation de GTK dans le navigateur
     desc: Ambitieux projet de portage de GTK avec WebAssembly et un transpilateur écrit en Rust.

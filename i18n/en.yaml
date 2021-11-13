@@ -32,6 +32,6 @@ projects:
     brief: Browser Video Game – Tower Defense
     desc: A complex multiplayer, strategy and tower defense game.
   goteka:
-    name: Goteka [Experimental, Ongoing]
+    name: Goteka [Experimental]
     brief: Compiling GTK for web browsers
     desc: Porting the GTK toolkit using WebAssembly and a homemade transpiler written in Rust.

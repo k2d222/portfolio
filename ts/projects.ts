@@ -4,6 +4,9 @@ import moncraft_en from "bundle-text:../projects/moncraft/en.pug"
 import ur_fr from "bundle-text:../projects/ur/fr.pug"
 import ur_en from "bundle-text:../projects/ur/en.pug"
 
+import pixels_fr from "bundle-text:../projects/pixels/fr.pug"
+import pixels_en from "bundle-text:../projects/pixels/en.pug"
+
 interface Project {
     img: URL,
     content?: { [key: string]: any }
@@ -37,6 +40,10 @@ const MyProjects: Projects = {
         img: new URL('../projects/pixels/pixels.png?as=webp&width=800', import.meta.url),
         collab: 'Sébastien Pereira',
         link: 'https://pixels.thissma.fr/',
+        content: {
+          fr: pixels_fr,
+          en: pixels_en,
+        },
     },
     podelium: {
         img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
