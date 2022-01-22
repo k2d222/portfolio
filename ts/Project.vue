@@ -69,6 +69,8 @@
 
     img
       width: 100%
+      max-height: 80vh
+      object-fit: contain
 
     strong
       font-weight: bolder
