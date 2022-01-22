@@ -1,3 +1,6 @@
+import perfanalytics_fr from "bundle-text:../projects/perfanalytics/fr.pug"
+import perfanalytics_en from "bundle-text:../projects/perfanalytics/en.pug"
+
 import moncraft_fr from "bundle-text:../projects/moncraft/fr.pug"
 import moncraft_en from "bundle-text:../projects/moncraft/en.pug"
 
@@ -26,6 +29,14 @@ const MyProjects: Projects = {
         content: {
           fr: moncraft_fr,
           en: moncraft_en,
+        },
+    },
+    perfanalytics: {
+        img: new URL('../projects/perfanalytics/perfanalytics.png?as=webp&width=800', import.meta.url),
+        link: 'https://perfanalytics.fr',
+        content: {
+          fr: perfanalytics_fr,
+          en: perfanalytics_en,
         },
     },
     ur: {

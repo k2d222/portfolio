@@ -19,6 +19,10 @@ projects:
     name: MonCraft
     brief: Voxel game inspired by Minecraft
     desc: Video game made "from sratch" in C++ and OpenGL. Playable in single- or multiplayer mode, on PC or in the browser.
+  perfanalytics:
+    name: PerfAnalytics
+    brief: Computer Vision internship
+    desc: Climbing holds detection and transformations in 3D space.
   ur:
     name: Royal Game of Ur
     brief: Board game in a web browser

@@ -19,6 +19,10 @@ projects:
     name: MonCraft
     brief: Jeu vidéo inspiré de Minecraft
     desc: Jeu vidéo Réalisé "from sratch" en C++ et OpenGL. Jouable en multijoueur, sur PC ou navigateur.
+  perfanalytics:
+    name: PerfAnalytics
+    brief: Traitement de vidéos d'escalade
+    desc: Stage dans un laboratoire de recherche à Grenoble
   ur:
     name: Jeu de Ur
     brief: Jeu de plateau dans le navigateur
