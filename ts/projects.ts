@@ -1,6 +1,9 @@
 import perfanalytics_fr from "bundle-text:../projects/perfanalytics/fr.pug"
 import perfanalytics_en from "bundle-text:../projects/perfanalytics/en.pug"
 
+import edt_fr from "bundle-text:../projects/edt/fr.pug"
+import edt_en from "bundle-text:../projects/edt/en.pug"
+
 import moncraft_fr from "bundle-text:../projects/moncraft/fr.pug"
 import moncraft_en from "bundle-text:../projects/moncraft/en.pug"
 
@@ -37,6 +40,14 @@ const MyProjects: Projects = {
         content: {
           fr: perfanalytics_fr,
           en: perfanalytics_en,
+        },
+    },
+    edt: {
+        img: new URL('../projects/edt/edt.png?as=webp&width=800', import.meta.url),
+        link: 'https://edt.fr',
+        content: {
+          fr: edt_fr,
+          en: edt_en,
         },
     },
     ur: {

@@ -23,6 +23,10 @@ projects:
     name: PerfAnalytics
     brief: Traitement de vidéos d'escalade
     desc: Stage dans un laboratoire de recherche à Grenoble
+  edt:
+    name: Polytech EDT
+    brief: Application Emploi du Temps
+    desc: Application Android pour l'école Polytech Paris-Saclay
   ur:
     name: Jeu de Ur
     brief: Jeu de plateau dans le navigateur

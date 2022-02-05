@@ -23,6 +23,10 @@ projects:
     name: PerfAnalytics
     brief: Computer Vision internship
     desc: Climbing holds detection and transformations in 3D space.
+  edt:
+    name: Polytech EDT
+    brief: Timetable application
+    desc: Android app for Polytech Paris-Saclay engineering school
   ur:
     name: Royal Game of Ur
     brief: Board game in a web browser
