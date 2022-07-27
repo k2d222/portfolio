@@ -19,6 +19,10 @@ projects:
     name: MonCraft
     brief: Jeu vidéo inspiré de Minecraft
     desc: Jeu vidéo Réalisé "from sratch" en C++ et OpenGL. Jouable en multijoueur, sur PC ou navigateur.
+  twwe:
+    name: Teeworlds Web Editor
+    brief: Éditeur de maps Teeworlds
+    desc: Éditeur de maps en ligne et collaboratif pour jeu vidéo "Teeworlds"
   perfanalytics:
     name: PerfAnalytics
     brief: Traitement de vidéos d'escalade

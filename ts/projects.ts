@@ -13,6 +13,9 @@ import ur_en from "bundle-text:../projects/ur/en.pug"
 import pixels_fr from "bundle-text:../projects/pixels/fr.pug"
 import pixels_en from "bundle-text:../projects/pixels/en.pug"
 
+import twwe_fr from "bundle-text:../projects/twwe/fr.pug"
+import twwe_en from "bundle-text:../projects/twwe/en.pug"
+
 interface Project {
     img: URL,
     content?: { [key: string]: any }
@@ -32,6 +35,15 @@ const MyProjects: Projects = {
         content: {
           fr: moncraft_fr,
           en: moncraft_en,
+        },
+    },
+    twwe: {
+        img: new URL('../projects/twwe/sunny.png?as=webp&width=800', import.meta.url),
+        link: 'https://tw.thissma.fr/',
+        git: 'https://github.com/k2d222/twwe',
+        content: {
+          fr: twwe_fr,
+          en: twwe_en,
         },
     },
     perfanalytics: {
@@ -66,10 +78,10 @@ const MyProjects: Projects = {
           en: pixels_en,
         },
     },
-    podelium: {
-        img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
-        collab: 'Emma Nourry, Nathanaël Almeida, Koko Bill Zadi Kenfack, Maxime Boissonat, Gaël Erluche',
-    },
+    // podelium: {
+    //     img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
+    //     collab: 'Emma Nourry, Nathanaël Almeida, Koko Bill Zadi Kenfack, Maxime Boissonat, Gaël Erluche',
+    // },
     // goteka: {
     //     img: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),
     // },

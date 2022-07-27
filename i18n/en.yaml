@@ -19,6 +19,10 @@ projects:
     name: MonCraft
     brief: Voxel game inspired by Minecraft
     desc: Video game made "from sratch" in C++ and OpenGL. Playable in single- or multiplayer mode, on PC or in the browser.
+  twwe:
+    name: Teeworlds Web Editor
+    brief: Map Editor for Teeworlds
+    desc: Online and collaborative editor for the video game "Teeworlds"
   perfanalytics:
     name: PerfAnalytics
     brief: Computer Vision internship
