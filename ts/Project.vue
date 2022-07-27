@@ -52,7 +52,7 @@
         line-height: 2em
 
   .project
-    font-size: 1.5rem
+    font-size: 1.2rem
     font-family: sans-serif
     margin: 3rem
     margin-top: 0
@@ -69,7 +69,7 @@
 
     img
       width: 100%
-      max-height: 80vh
+      max-height: 70vh
       object-fit: contain
 
     strong
@@ -101,7 +101,7 @@
         </div>
         <div v-if="projmeta_e('git')">
           <h3>{{ $t('projectgit') }}</h3>
-          <a :href="projmeta('git')">{{ projmeta('git') }}</a>
+          <a :href="projmeta('git')">{{ fmturl(projmeta('git')) }}</a>
         </div>
       </div>
     </section>

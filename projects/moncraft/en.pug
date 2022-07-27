@@ -1,5 +1,5 @@
 :markdown-it
-  [MonCraft](https://moncraft.thissma.fr/) is a 3D video game inspired by [Minecraft](https://minecraft.net/). Development began during a course dispensed by [Mr. Isenberg](https://tobias.isenberg.cc/) at the engineering school Polytech Paris-Saclay.
+  [MonCraft](https://moncraft.thissma.fr/) is a 3D video game inspired by [Minecraft](https://minecraft.net/). Development began during a course dispensed by [Dr. Isenberg](https://tobias.isenberg.cc/) at the engineering school Polytech Paris-Saclay.
   Development continued after the course as the subject interessed us particularly.
 
   MonCraft is build from scratch, allowing us to experiment and try our ideas in 3D rendering. Many features have been implemented, such as: an infinite **procedural generation**, a **multiplayer** mode, a demo **[web version](https://moncraft.thissma.fr/)**.
@@ -7,5 +7,34 @@
 img(src='moncraft.png?as=webp&width=800' alt="An in-game screenshot")
 div(class='img-desc') An in-game screenshot
 
+:markdown-it
+  Minecraft is an interesting game to code, as it groups together a number of interesting 3D graphics challenges. The most prevalent are detailled below.
+  
+  ## Procedural generation
+  The world generation is *procedural*, *infinite* and *reproducible* (seeded). It means that we can generate infinitely many different worlds, that are (almost) infinitely large, and entierely controlled by a single number : the *seed*.
+
+  World generation combines mathematical knowledge about random number generators (PRNGs), hash functions, voronoi patterns, procedural noises (perlin), … With performance and artistic concerns.
+
 img(src='collage.png?as=webp&width=800' alt="Procedurally generated images")
 div(class='img-desc') Procedurally generated images used for biome generation
+
+:markdown-it
+  As you can see, generation can also be an artistic process. This is merely an overview of the plethora of images we generated while calibrating our random number engines and developped the different *biomes*.
+  The game includes different landscapes such as forests, plains, deserts, oceans, mountains…
+
+  ## Light and Shadows
+    
+  Shadows are casted using *Cascading Shadow Maps* it means that at each frame, the world is rendered both from the player- and the sun's perspective. There are three levels or details, allowing to concentrate the shadow details near the player and leverage computing power.
+  
+  The water surface has animated reflections using a *normal map* generated procedurally. The game includes a day/light cycle.
+  
+  ## Chunking and Meshing
+
+  The world is sliced in regions of 16×16×16 blocks called *Chunks*. This allows to load and unload parts of the world around the player as it moves.
+  Each chunk is responsible for a *mesh* (a renderable 3D model). For optimal performances, only visible block faces are loaded and only chunks in front of the player are rendered.
+
+  The chunks are *serializable*, meaning the world can be sent over the network or saved on the disk when modified.
+
+img(src='chunks.png?as=webp&width=800' alt="Overview of the chunks in the world")
+div(class='img-desc') Overview of the chunks in the world
+

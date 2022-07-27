@@ -44,7 +44,6 @@ const MyProjects: Projects = {
     },
     edt: {
         img: new URL('../projects/edt/edt.png?as=webp&width=800', import.meta.url),
-        link: 'https://edt.fr',
         content: {
           fr: edt_fr,
           en: edt_en,
@@ -71,9 +70,9 @@ const MyProjects: Projects = {
         img: new URL('../projects/podelium/artwork.png?as=webp&width=800', import.meta.url),
         collab: 'Emma Nourry, Nathanaël Almeida, Koko Bill Zadi Kenfack, Maxime Boissonat, Gaël Erluche',
     },
-    goteka: {
-        img: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),
-    },
+    // goteka: {
+    //     img: new URL('../projects/goteka/widgets.png?as=webp&width=800', import.meta.url),
+    // },
 }
 
 export default MyProjects;
